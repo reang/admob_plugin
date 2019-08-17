@@ -67,4 +67,10 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    Admob.InterstitialAd(hashCode).dispose();
+    super.dispose();
+  }
 }
