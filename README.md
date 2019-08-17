@@ -32,6 +32,18 @@ void main() async {
 }
 ```
 
+Add your AdMob App ID to your app's AndroidManifest.xml file by adding the <meta-data> tag shown below.
+```xml
+<manifest>
+    <application>
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="YOUR_ADMOB_APP_ID"/>
+    </application>
+</manifest>
+```
+
 ### Interstitial Ad
 ```dart
 Admob.InterstitialAd(hashCode).load();
